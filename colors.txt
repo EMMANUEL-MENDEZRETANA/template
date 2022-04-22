@@ -1,0 +1,13 @@
+top-menu: #353f46
+e: #4bcaff
+selected-menu: #4bcaff
+header-copy: #404a52
+dark-copy: #515f67
+white-copy: #ffffff
+just-default-section: #515f67
+visit-me: #353f46
+twitter-section: #4bcaff
+testimonial-name: #4bcaff
+message-button: #4bcaff
+footer: #353f47
+
