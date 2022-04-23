@@ -1,0 +1,13 @@
+@use '../abstracts/mixins';
+
+.navigation {
+    @include mixins.set-background-color('background');
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+
+    ul {
+        display: flex;
+        gap: 1em;
+    }
+}

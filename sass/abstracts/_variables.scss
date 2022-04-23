@@ -1,0 +1,23 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$colors: (
+    'background': rgba(53, 63, 70, .8),
+    'primary': #353f46,
+    'secondary': #4bcaff,
+);
+
+$font: 'Noto Sans';
+
+$font-sizes: (
+    'small': 0.875rem,
+    'medium': 1.75rem,
+    'big': 1.875rem,
+    'large': 2.625rem,
+);
+
+$font-weights: (
+    'light': 300,
+	'regular': 400,
+	'bold': 700,
+);

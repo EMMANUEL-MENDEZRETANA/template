@@ -1,0 +1,13 @@
+@use '../abstracts/mixins';
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.brand {
+    @include mixins.set-typography('big', 'bold');
+}

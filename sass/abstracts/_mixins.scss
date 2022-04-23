@@ -1,0 +1,12 @@
+@use './variables';
+
+@mixin set-background-color($color) {
+	background-color: map-get(variables.$colors, $color);
+}
+
+@mixin set-typography($size, $weight) {
+	font-family: variables.$font;
+	font-size: map-get(variables.$font-sizes, $size);
+	font-weight: map-get(variables.$font-weights, $weight);
+	margin: 0;
+}
