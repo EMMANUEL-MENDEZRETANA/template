@@ -27,26 +27,47 @@
 			defer
 		></script>
 	</head>
-
 	<body>
 		<header class="container-fluid">
-			<nav class="navigation fixed-top" aria-label="main navigation">
-				<a class="brand" href="#">BLU<span>E</span>ASY</a>
-				<ul>
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">SERVICES</a></li>
-					<li><a href="#">FEATURES</a></li>
-					<li><a href="#">PORTFOLIO</a></li>
-					<li><a href="#">CONTACT</a></li>
-				</ul>
-			</nav>
+			<div class="navbar-container fixed-top">
+				<nav class="navbar navbar-expand-sm container">
+					<a class="navbar-brand" href="./index.html">BLU<span>E</span>ASY</a>
 
-			<div class="header-content row">
-				<img class="col" src="./images/header.jpg" alt="" />
-				<h1>
-					"I'M LOOKING FOR THE UNEXPECTED.<br />I'M LOOKING FOR THINGS I'VE
-					NEVER SEEN BEFORE."
-				</h1>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+						<ul class="navbar-nav gap-4">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#top">HOME</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">SERVICES</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">FEATURES</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">PORTFOLIO</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">CONTACT</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="row">
+				<img src="./images/header.jpg" alt="">
 			</div>
 		</header>
 	</body>

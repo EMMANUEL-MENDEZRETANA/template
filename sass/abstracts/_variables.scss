@@ -2,22 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
 $colors: (
-    'background': rgba(53, 63, 70, .8),
-    'primary': #353f46,
-    'secondary': #4bcaff,
+	'background': rgba(53, 63, 70, 0.8),
+	'primary': #353f46,
+	'secondary': #4bcaff,
+	'light': #ffffff,
+	'dark': #404a52,
 );
 
 $font: 'Noto Sans';
 
 $font-sizes: (
-    'small': 0.875rem,
-    'medium': 1.75rem,
-    'big': 1.875rem,
-    'large': 2.625rem,
+	'small': 0.875rem,
+	// 14 px
+	'medium': 1.75rem,
+	// 28 px
+	'big': 1.875rem,
+	// 30 px
+	'large': 2.625rem,
+	// 42 px
 );
 
 $font-weights: (
-    'light': 300,
+	'light': 300,
 	'regular': 400,
 	'bold': 700,
+);
+
+$breakpoints: (
+	'small': 768px,
+	'medium': 992px,
+	'large': 1200px,
 );

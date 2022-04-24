@@ -1,6 +1,6 @@
-@forward './base/base';
-
 @forward './layout/header';
 @forward './layout/navigation';
 
-@forward './vendors/bootstrap/scss/bootstrap.scss';
+@forward './vendors/bootstrap/bootstrap';
+
+@forward './vendors-extensions/bootstrap';

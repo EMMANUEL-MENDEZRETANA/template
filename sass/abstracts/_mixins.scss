@@ -4,9 +4,20 @@
 	background-color: map-get(variables.$colors, $color);
 }
 
-@mixin set-typography($size, $weight) {
+@mixin set-color($color) {
+	color: map-get(variables.$colors, $color);
+}
+
+@mixin set-typography($size, $weight, $color: 'light') {
 	font-family: variables.$font;
 	font-size: map-get(variables.$font-sizes, $size);
 	font-weight: map-get(variables.$font-weights, $weight);
+	color: map-get(variables.$colors, $color);
 	margin: 0;
+}
+
+@mixin media($breakpoint) {
+	@media (max-width: map-get(variables.$breakpoints, $breakpoint)) {
+		@content;
+	}
 }

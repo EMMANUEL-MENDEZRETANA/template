@@ -1,8 +1,9 @@
-.header-content {
+@use '../abstracts/mixins';
 
-    
-    img {
-        padding: 0;
-    }
-    
+header {
+	.row {
+		img {
+			padding: 0;
+		}
+	}
 }

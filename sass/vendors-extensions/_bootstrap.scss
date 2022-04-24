@@ -1,0 +1,40 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.container {
+	@include mixins.media('small') {
+		width: 90%;
+	}
+}
+
+.navbar-brand {
+	@include mixins.set-typography('big', 'bold');
+	transition: color ease 0.5s;
+
+	span {
+		@include mixins.set-color('secondary');
+		transition: color ease 0.5s;
+	}
+
+	&:hover {
+		@include mixins.set-color('secondary');
+
+		span {
+			@include mixins.set-color('light');
+		}
+	}
+}
+
+.nav-link {
+	@include mixins.set-typography('small', 'bold');
+	padding: 0.5em 1.5em;
+
+	&:hover {
+		@include mixins.set-color('secondary');
+	}
+}
+
+.active {
+	@include mixins.set-color('secondary');
+	border: 2px solid map-get(variables.$colors, 'secondary');
+}
