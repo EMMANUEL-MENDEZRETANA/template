@@ -1,0 +1,1 @@
+$$ = selectors => document.querySelectorAll(selectors);
