@@ -8,12 +8,12 @@ header {
             padding: 0;
 
             @include mixins.media('small') {
-                height: 90vh;
+                height: 80vh;
                 object-fit: cover;
             }
 
             @include mixins.media('medium') {
-                height: 80vh;
+                height: 60vh;
                 object-fit: cover;
             }
 		}

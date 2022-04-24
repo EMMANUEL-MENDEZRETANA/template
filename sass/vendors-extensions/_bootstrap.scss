@@ -48,7 +48,6 @@ h1 {
 		.nav-link {
 			@include mixins.set-typography('small', 'bold');
 			padding: 0.5em 1.5em;
-			transition: color ease .5s, border ease .5s;
 		
 			&:hover {
 				@include mixins.set-color('secondary');
@@ -60,7 +59,7 @@ h1 {
 
 			&.active {
 				@include mixins.set-color('secondary');
-				border: 2px solid map-get(variables.$colors, 'secondary');
+				outline: 2px solid map-get(variables.$colors, 'secondary');
 			}
 		}
 		
