@@ -1,9 +1,21 @@
+@use '../abstracts/mixins';
+
 header {
 	.row {
         position: relative;
 
 		img {
-			padding: 0;
+            padding: 0;
+
+            @include mixins.media('small') {
+                height: 90vh;
+                object-fit: cover;
+            }
+
+            @include mixins.media('medium') {
+                height: 80vh;
+                object-fit: cover;
+            }
 		}
 
         h1 {

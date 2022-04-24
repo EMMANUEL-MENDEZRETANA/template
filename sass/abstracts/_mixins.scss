@@ -17,7 +17,14 @@
 }
 
 @mixin media($breakpoint) {
-	@media (max-width: map-get(variables.$breakpoints, $breakpoint)) {
-		@content;
+	@if $breakpoint == 'small' {
+		@media only screen and (max-width: map-get(variables.$breakpoints, $breakpoint)) {
+			@content;
+		}
+	}
+	@else if $breakpoint == 'medium' {
+		@media only screen and (max-width: map-get(variables.$breakpoints, $breakpoint)) and (min-width: map-get(variables.$breakpoints, 'small')) {
+			@content;
+		}
 	}
 }

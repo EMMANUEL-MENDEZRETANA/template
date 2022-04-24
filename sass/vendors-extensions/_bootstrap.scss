@@ -17,34 +17,52 @@ h1 {
 	}
 }
 
-.navbar-brand {
-	@include mixins.set-typography('big', 'bold');
-	transition: color ease 0.5s;
-
-	span {
-		@include mixins.set-color('secondary');
+.navbar-dark {
+	.navbar-brand {
+		@include mixins.set-typography('big', 'bold');
 		transition: color ease 0.5s;
-	}
-
-	&:hover {
-		@include mixins.set-color('secondary');
-
+	
 		span {
-			@include mixins.set-color();
+			@include mixins.set-color('secondary');
+			transition: color ease 0.5s;
+		}
+	
+		&:hover {
+			@include mixins.set-color('secondary');
+	
+			span {
+				@include mixins.set-color();
+			}
 		}
 	}
-}
 
-.nav-link {
-	@include mixins.set-typography('small', 'bold');
-	padding: 0.5em 1.5em;
+	.navbar-toggler {
+		border: none;
 
-	&:hover {
-		@include mixins.set-color('secondary');
+		&:focus {
+			box-shadow: none;
+		}
 	}
-}
 
-.active {
-	@include mixins.set-color('secondary');
-	border: 2px solid map-get(variables.$colors, 'secondary');
+	.navbar-nav {
+		.nav-link {
+			@include mixins.set-typography('small', 'bold');
+			padding: 0.5em 1.5em;
+			transition: color ease .5s, border ease .5s;
+		
+			&:hover {
+				@include mixins.set-color('secondary');
+			}
+		
+			&:focus {
+				@include mixins.set-color('secondary');
+			}
+
+			&.active {
+				@include mixins.set-color('secondary');
+				border: 2px solid map-get(variables.$colors, 'secondary');
+			}
+		}
+		
+	}
 }
