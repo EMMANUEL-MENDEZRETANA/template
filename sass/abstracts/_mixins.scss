@@ -4,7 +4,7 @@
 	background-color: map-get(variables.$colors, $color);
 }
 
-@mixin set-color($color) {
+@mixin set-color($color: 'light') {
 	color: map-get(variables.$colors, $color);
 }
 
