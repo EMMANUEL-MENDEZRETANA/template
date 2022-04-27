@@ -1,6 +1,8 @@
 @forward './layout/header';
 @forward './layout/navigation';
 
-@forward './vendors/bootstrap/bootstrap';
+@import './vendors-extensions/bootstrap/custom-variables';
 
-@forward './vendors-extensions/bootstrap';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './vendors-extensions/bootstrap/custom_components';

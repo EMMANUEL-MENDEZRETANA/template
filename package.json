@@ -1,0 +1,11 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EMMANUEL-MENDEZRETANA/template.git",
+  "author": "Emmanuel Adolfo Méndez Retana <Emmanuelmendezretana@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

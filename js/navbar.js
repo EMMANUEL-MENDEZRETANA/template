@@ -11,3 +11,4 @@ const updateActiveClass = id => {
 }
 
 updateActiveClass('menuNavbar');
+updateActiveClass('servicesNavbar');
