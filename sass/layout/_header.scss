@@ -5,8 +5,6 @@ header {
         position: relative;
 
 		img {
-            padding: 0;
-
             @include mixins.media('small') {
                 height: 80vh;
                 object-fit: cover;

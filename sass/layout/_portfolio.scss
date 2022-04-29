@@ -1,0 +1,36 @@
+@use '../abstracts/mixins';
+
+.portfolio__container-image {
+	position: relative;
+
+    &::before {
+        content: '';
+        transition: background-color ease .5s;
+    }
+
+    &::after {
+        content: '';
+        transition: color ease .8s;
+    }
+
+	&:hover {
+		&::before {
+			content: '';
+			@include mixins.set-background-color('background');
+			width: calc(100% - 1.5rem);
+			height: 100%;
+			position: absolute;
+		}
+
+		&::after {
+			content: '+';
+			@include mixins.set-color();
+			position: absolute;
+			font-size: 4rem;
+			font-weight: 300;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

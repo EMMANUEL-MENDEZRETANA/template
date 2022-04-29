@@ -13,7 +13,6 @@
 	font-size: map-get(variables.$font-sizes, $size);
 	font-weight: map-get(variables.$font-weights, $weight);
 	color: map-get(variables.$colors, $color);
-	// margin: 0;
 }
 
 @mixin media($breakpoint) {

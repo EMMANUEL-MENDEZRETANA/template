@@ -7,19 +7,27 @@ h1 {
 
 	span {
 		@include mixins.set-background-color('background');
-		padding: .2em;
+		padding: 0.2em;
 	}
 }
 
 h2 {
-	@include mixins.set-typography('big', 'light');
+	@include mixins.set-typography('big', 'light', 'primary');
 	margin-bottom: 1em;
-	
+
 	&::after {
-		content: "";
+		content: '';
 		display: block;
 		width: 1.5em;
-		border-bottom: 2px solid white;
+		border-bottom: 2px solid map-get(variables.$colors, 'primary');
+	}
+
+	.bg-primary &,
+	.bg-secondary & {
+		@include mixins.set-color();
+		&::after {
+			border-bottom: 2px solid map-get(variables.$colors, 'light');
+		}
 	}
 }
 
@@ -37,19 +45,20 @@ p {
 	}
 }
 
-.navbar-dark {
+.navbar-dark,
+.navbar-light {
 	.navbar-brand {
 		@include mixins.set-typography('big', 'bold');
 		transition: color ease 0.5s;
-	
+
 		span {
 			@include mixins.set-color('secondary');
 			transition: color ease 0.5s;
 		}
-	
+
 		&:hover {
 			@include mixins.set-color('secondary');
-	
+
 			span {
 				@include mixins.set-color();
 			}
@@ -69,11 +78,11 @@ p {
 			@include mixins.set-typography('small', 'bold');
 			border: 2px solid transparent;
 			padding: 0.5em 1.5em;
-		
+
 			&:hover {
 				@include mixins.set-color('secondary');
 			}
-		
+
 			&:focus {
 				@include mixins.set-color('secondary');
 			}
@@ -83,6 +92,13 @@ p {
 				border: 2px solid map-get(variables.$colors, 'secondary');
 			}
 		}
-		
+	}
+}
+
+.navbar-light {
+	.navbar-nav {
+		.nav-link {
+			@include mixins.set-color('primary');
+		}
 	}
 }
