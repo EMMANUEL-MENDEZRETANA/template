@@ -11,6 +11,26 @@ h1 {
 	}
 }
 
+h2 {
+	@include mixins.set-typography('big', 'light');
+	margin-bottom: 1em;
+	
+	&::after {
+		content: "";
+		display: block;
+		width: 1.5em;
+		border-bottom: 2px solid white;
+	}
+}
+
+h3 {
+	@include mixins.set-typography('medium', 'regular');
+}
+
+p {
+	@include mixins.set-typography('small', 'regular');
+}
+
 .container {
 	@include mixins.media('small') {
 		width: 90%;
