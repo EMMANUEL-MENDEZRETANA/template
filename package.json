@@ -1,10 +1,21 @@
 {
   "name": "template",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/EMMANUEL-MENDEZRETANA/template.git",
-  "author": "Emmanuel Adolfo Méndez Retana <Emmanuelmendezretana@gmail.com>",
-  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EMMANUEL-MENDEZRETANA/template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EMMANUEL-MENDEZRETANA/template/issues"
+  },
+  "homepage": "https://github.com/EMMANUEL-MENDEZRETANA/template#readme",
   "dependencies": {
     "bootstrap": "^5.1.3"
   }
