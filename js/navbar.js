@@ -2,15 +2,11 @@ $ = id => document.getElementById(id);
 $$ = selectors => document.querySelectorAll(selectors);
 
 const observeActiveClass = element => {
-	const callback = (entries) => {
+	const callback = entries => {
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
 				$$(`#menuNavbar .nav-item .nav-link`).forEach(link => {
-					if (link.getAttribute('href') == `#${element}`) {
-						link.classList.add('active');
-					} else {
-						link.classList.remove('active');
-					}
+					link.classList.toggle('active', link.getAttribute('href') == `#${element}`);
 				});
 			}
 		});
@@ -18,7 +14,7 @@ const observeActiveClass = element => {
 	const options = {
 		root: null,
 		rootMargin: '0px',
-		threshold: 0.2,
+		threshold: window.innerWidth > 768 ? 0.35 : 0.15,
 	};
 
 	return new IntersectionObserver(callback, options).observe($(element));
@@ -27,9 +23,7 @@ const observeActiveClass = element => {
 const updateActiveClass = id => {
 	$(id).addEventListener('click', event => {
 		if (event.target.classList.contains('nav-link')) {
-			$$(`#${id} .nav-item .nav-link`).forEach(link =>
-				link.classList.remove('active'),
-			);
+			$$(`#${id} .nav-item .nav-link`).forEach(link => link.classList.remove('active'));
 			event.target.classList.add('active');
 		}
 	});
